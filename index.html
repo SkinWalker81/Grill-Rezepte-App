@@ -87,6 +87,10 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
 .checklist input[type=checkbox] { margin-top: 2px; width: 18px; height: 18px; accent-color: #c0392b; cursor: pointer; flex-shrink: 0; }
 .checklist li.checked label { text-decoration: line-through; color: #bbb; }
 
+/* RESET BUTTON */
+.reset-btn { display: flex; align-items: center; gap: 0.5rem; background: white; border: 1.5px solid #c0392b; color: #c0392b; border-radius: 8px; padding: 0.55rem 1rem; font-size: 0.88rem; font-weight: 600; cursor: pointer; margin-bottom: 1.2rem; }
+.reset-btn:active { background: #fff0ef; }
+
 /* VIDEO */
 .video-link { display: flex; align-items: center; gap: 0.8rem; background: #fff0ef; border: 1.5px solid #e74c3c; border-radius: 10px; padding: 0.9rem 1.2rem; text-decoration: none; color: #c0392b; font-weight: 600; font-size: 0.93rem; margin-top: 0.5rem; }
 .play-icon { width: 34px; height: 34px; background: #e74c3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -182,6 +186,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
       <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Glas Jalapenos</label></li>
       <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="3" data-unit="Stk">3</span> Frühlingszwiebeln</label></li>
     </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
     <h2>📋 Zubereitung</h2>
     <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Grill vorheizen</div></div><div class="step-body">Grill auf kleinste Stufe vorheizen – niedrige gleichmäßige Hitze. Wir brauchen drei Flächen gleichzeitig für die drei Pfannen.</div></div>
     <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Käsesauce – Pfanne 1</div></div><div class="step-body">Schmelzkäse (1.200 g) mit 200 ml Schlagsahne und 4 EL Sriracha in eine Grillpfanne. Regelmäßig rühren bis alles cremig ist.</div></div>
@@ -255,6 +260,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <ul class="ingredient-list">
       <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Handvoll Räucherchips (eingeweicht)</label></li>
     </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
     <h2>📋 Zubereitung</h2>
     <div class="day-label">🌙 Am Vortag</div>
     <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Wings trockenwürzen (~15 Min)</div></div><div class="step-body">Wings mit Küchenpapier <strong>gründlich</strong> trocken tupfen – wichtigster Schritt! Alle Würzzutaten vermengen bis alle Wings gleichmäßig bedeckt sind.</div></div>
@@ -341,6 +347,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="200" data-unit="g">200 g</span> Schmand oder Crème fraîche</label></li>
     <li><input type="checkbox" onchange="toggleCheck(this)"><label>Pico de Gallo (optional)</label></li>
     </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
     <h2>📋 Zubereitung</h2>
     <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Gemüse schneiden</div></div><div class="step-body">Zwiebeln in grobe Würfel (ca. 1 cm). Paprika entkernen und würfeln. Schale nicht mögen? Kurz rösten &amp; häuten oder mit Sparschäler schälen.</div></div>
     <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Bauchspeck auslassen</div></div><div class="step-body">Speck würfeln, in eine <strong>kalte</strong> Pfanne geben und bei mittlerer Hitze (unter 150 °C) goldbraun auslassen. Speck herausnehmen, Fett in der Pfanne lassen.</div></div>
@@ -388,6 +395,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="300" data-unit="ml">300 ml</span> Bier (z.B. helles Bier)</label></li>
     <li><input type="checkbox" onchange="toggleCheck(this)"><label>Hot Sauce (optional)</label></li>
     </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
     <h2>📋 Zubereitung</h2>
     <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Fleisch vorbereiten</div></div><div class="step-body">Schweinenacken und Schweinebauch von Knorpeln, Sehnen und Knochen befreien und in 1–2 cm dicke Scheiben schneiden. Mit dem BBQ-Rub würzen.</div></div>
     <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Räuchern – 1 Stunde bei 100 °C</div></div><div class="step-body">Das gewürzte Fleisch ca. 1 Stunde im Grill bei 100 °C räuchern. Währenddessen Zwiebeln in Ringe und Paprika in Streifen schneiden.</div></div>
@@ -438,6 +446,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="2" data-unit="TL">2 TL</span> Senfsaat</label></li>
     <li><input type="checkbox" onchange="toggleCheck(this)"><label>Speisestärke (zum Binden)</label></li>
     </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
     <h2>📋 Zubereitung</h2>
     <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Fleisch vorbereiten &amp; scharf anbraten</div></div><div class="step-body">Schweinenacken von Sehnen und Knochenhaut befreien, rundherum großzügig salzen. Dutch Oven <strong>stark</strong> vorheizen und den Braten von allen Seiten kräftig anbraten. Herausnehmen und beiseitestellen.</div></div>
     <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Gemüse anrösten</div></div><div class="step-body">Zwiebeln, Möhren und Sellerie grob würfeln, Knoblauch andrücken. Im Bratensatz anrösten bis das Gemüse deutliche Farbe bekommt. Tomatenmark zugeben und mitrösten bis es dunkler wird.</div></div>
@@ -514,17 +523,18 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
       <p>Low-Carb-Brot fürs Grillen – knusprige Kruste, saftig innen, passt perfekt zu Pulled Pork &amp; Wings.</p>
     </div>
     <h2>🛒 Zutaten</h2>
-    <table class="ing-table">
-      <tr><td>250 g</td><td>Mandelmehl (fein)</td></tr>
-      <tr><td>3 EL</td><td>Flohsamenschalen (gemahlen)</td></tr>
-      <tr><td>2 TL</td><td>Backpulver</td></tr>
-      <tr><td>1 TL</td><td>Salz</td></tr>
-      <tr><td>5 Stk</td><td>Eier, groß</td></tr>
-      <tr><td>1 EL</td><td>Apfelessig</td></tr>
-      <tr><td>2 EL</td><td>Olivenöl</td></tr>
-      <tr><td>80 ml</td><td>Warmes Wasser</td></tr>
-      <tr><td>2 EL</td><td>Sesam oder Kürbiskerne zum Bestreuen (optional)</td></tr>
-    </table>
+    <ul class="ingredient-list">
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>250 g Mandelmehl (fein)</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>3 EL Flohsamenschalen (gemahlen)</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>2 TL Backpulver</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 TL Salz</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>5 Eier, groß</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 EL Apfelessig</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>2 EL Olivenöl</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>80 ml Warmes Wasser</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>2 EL Sesam oder Kürbiskerne zum Bestreuen (optional)</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
     <h2>👨‍🍳 Zubereitung</h2>
     <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Ofen vorheizen</div></div><div class="step-body">Backofen auf 175°C Ober-/Unterhitze vorheizen. Backblech mit Backpapier auslegen.</div></div>
     <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Trockene Zutaten mischen</div></div><div class="step-body">Mandelmehl, Flohsamenschalen, Backpulver und Salz in einer großen Schüssel gut vermischen.</div></div>
@@ -566,6 +576,13 @@ function showRecipe(cat, id, btn) {
 function toggleCheck(cb) {
   var li = cb.closest('li');
   if (cb.checked) { li.classList.add('checked'); } else { li.classList.remove('checked'); }
+}
+function resetChecklist(btn) {
+  var recipe = btn.closest('.recipe');
+  recipe.querySelectorAll('.ingredient-list input[type=checkbox]').forEach(function(cb) {
+    cb.checked = false;
+    cb.closest('li').classList.remove('checked');
+  });
 }
 
 function changePortions(btn, delta) {
