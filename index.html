@@ -2,6 +2,32 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<script>
+// Auto-Update: prüft bei jedem Öffnen im Hintergrund gegen version.txt (ohne HTTP-Cache)
+// und lädt die Seite mit neuem Cache-Buster neu, falls sich der Inhalt geändert hat.
+// Dadurch zeigt das Home-Bildschirm-Icon auf iOS immer die aktuelle Version, ohne dass
+// Mario/Simone die Seite manuell neu laden oder das Icon neu anlegen müssen.
+(function () {
+  try {
+    fetch('version.txt?_=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.text(); })
+      .then(function (v) {
+        v = v.trim();
+        var stored = localStorage.getItem('appVersion');
+        if (stored && stored !== v) {
+          localStorage.setItem('appVersion', v);
+          location.replace(location.pathname + '?v=' + encodeURIComponent(v));
+        } else if (!stored) {
+          localStorage.setItem('appVersion', v);
+        }
+      })
+      .catch(function () {});
+  } catch (e) {}
+})();
+</script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Marios Rezepte</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
