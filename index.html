@@ -139,6 +139,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
 <div class="recipe-nav" id="subnav-keto">
   <button onclick="showRecipe('keto','brot',this)" class="active">🥖 Keto-Brot</button>
   <button onclick="showRecipe('keto','haehnchen-salat',this)">🥗 Hähnchen-Salat</button>
+  <button onclick="showRecipe('keto','rucola-salat',this)">🥗 Rucola-Salat</button>
   <button onclick="showRecipe('keto','tipps',this)">💡 Tipps</button>
 </div>
 
@@ -678,6 +679,46 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <h2>💡 Tipps &amp; Variationen</h2>
     <div class="tip-box"><strong>Varianten:</strong> Statt Blattsalat geht auch Rucola oder Feldsalat für mehr Würze. Wer's schärfer mag, gibt etwas Chiliflocken oder ein paar Tropfen Tabasco ins Dressing. Für mehr Crunch passen auch ein paar geröstete Walnüsse oder Sonnenblumenkerne (Menge im Blick behalten wegen der Kohlenhydrate).</div>
     <div class="tip-box"><strong>Nährwerte pro Portion:</strong> ca. 620 kcal, 48 g Fett, 40 g Eiweiß, 6 g Netto-Kohlenhydrate (2 Portionen gesamt).</div>
+  </div>
+
+  <!-- GRIECHISCHER RUCOLA-SALAT -->
+  <div class="recipe" id="keto-rucola-salat">
+    <h1 class="recipe-title">🥗 Griechischer Rucola-Salat mit Feta und Hähnchen</h1>
+    <div class="portion-stepper" data-base="1">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">1</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box">
+      <div class="info-meta"><span>👥 1 Portion</span><span>🔪 10 min Vorbereitung</span><span>🔥 12 min Zubereitung</span></div>
+      <p>Frischer, kalter Keto-Salat mit Rucola, Feta, Gurke und Hähnchen oder Thunfisch – ganz ohne Oliven, dafür mit dem gewohnten Olivenöl-Balsamico-Dressing.</p>
+    </div>
+    <h2>🛒 Zutaten</h2>
+    <ul class="ingredient-list">
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="80" data-unit="g">80 g</span> Rucola</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="120" data-unit="g">120 g</span> Hähnchenbrust (alternativ: 1 Dose Thunfisch, abgetropft)</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="50" data-unit="g">50 g</span> Feta</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="80" data-unit="g">80 g</span> Salatgurke</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,3 Rote Zwiebel</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="60" data-unit="g">60 g</span> Kirschtomaten</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Olivenöl (zum Anbraten)</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="3" data-unit="EL">3 EL</span> Olivenöl (für Dressing)</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Balsamicoessig</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,5 TL Getrockneter Oregano</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,3 TL Salz</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,3 TL Schwarzer Pfeffer</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>👨‍🍳 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Hähnchen würzen und braten</div></div><div class="step-body">Hähnchenbrust mit Salz und Pfeffer würzen und in Olivenöl bei mittlerer Hitze 5–6 Minuten pro Seite goldbraun und durchgaren. Kurz ruhen lassen, dann in Streifen schneiden. (Bei Thunfisch diesen Schritt überspringen.)</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Gemüse vorbereiten</div></div><div class="step-body">Salatgurke in Scheiben oder Würfel schneiden. Kirschtomaten halbieren. Rote Zwiebel in dünne Ringe schneiden.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Salatbasis anrichten</div></div><div class="step-body">Rucola auf einem Teller verteilen, Gurke, Kirschtomaten und Zwiebelringe darauf verteilen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Feta und Hähnchen hinzufügen</div></div><div class="step-body">Feta in Würfel schneiden oder krümeln und über den Salat geben. Hähnchenstreifen (oder Thunfisch) darauf anrichten.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Dressing zubereiten und servieren</div></div><div class="step-body">Olivenöl (für Dressing), Balsamicoessig und Oregano verquirlen, über den Salat träufeln und sofort servieren.</div></div>
+    <h2>💡 Tipps &amp; Variationen</h2>
+    <div class="tip-box"><strong>Varianten:</strong> Statt roter Zwiebel geht auch etwas frische Petersilie für mehr Frische ohne zusätzliche Kohlenhydrate.</div>
+    <div class="tip-box"><strong>Nährwerte pro Portion (mit Hähnchen):</strong> ca. 590 kcal, 46 g Fett, 34 g Eiweiß, 6 g Netto-Kohlenhydrate. Mit Thunfisch statt Hähnchen: ca. 540 kcal, 40 g Fett, 33 g Eiweiß.</div>
   </div>
 
   <!-- TIPPS -->
