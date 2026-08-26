@@ -166,6 +166,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
   <button onclick="showRecipe('keto','brot',this)" class="active">🥖 Keto-Brot</button>
   <button onclick="showRecipe('keto','haehnchen-salat',this)">🥗 Hähnchen-Salat</button>
   <button onclick="showRecipe('keto','rucola-salat',this)">🥗 Rucola-Salat</button>
+  <button onclick="showRecipe('keto','zander',this)">🐟 Zanderfilet</button>
   <button onclick="showRecipe('keto','tipps',this)">💡 Tipps</button>
 </div>
 
@@ -745,6 +746,44 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <h2>💡 Tipps &amp; Variationen</h2>
     <div class="tip-box"><strong>Varianten:</strong> Statt roter Zwiebel geht auch etwas frische Petersilie für mehr Frische ohne zusätzliche Kohlenhydrate.</div>
     <div class="tip-box"><strong>Nährwerte pro Portion (mit Hähnchen):</strong> ca. 590 kcal, 46 g Fett, 34 g Eiweiß, 6 g Netto-Kohlenhydrate. Mit Thunfisch statt Hähnchen: ca. 540 kcal, 40 g Fett, 33 g Eiweiß.</div>
+  </div>
+
+  <!-- ZANDERFILET -->
+  <div class="recipe" id="keto-zander">
+    <h1 class="recipe-title">🐟 Zanderfilet mit knuspriger Haut in Zitronen-Butter-Sauce</h1>
+    <div class="portion-stepper" data-base="1">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">1</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box">
+      <div class="info-meta"><span>👥 1 Portion</span><span>🔪 10 min Vorbereitung</span><span>🔥 15 min Zubereitung</span></div>
+      <p>Zanderfilet mit knusprig gebratener Haut, dazu eine leichte Butter-Sahne-Sauce mit Zitrone und Kapern sowie Blattspinat. Ketogen und elegant.</p>
+    </div>
+    <h2>🛒 Zutaten</h2>
+    <ul class="ingredient-list">
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="200" data-unit="g">200 g</span> Zanderfilet, mit Haut</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="20" data-unit="g">20 g</span> Butter</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="2" data-unit="EL">2 EL</span> Sahne (Schlagobers)</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Zitronensaft</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Kapern</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,5 TL Salz</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,3 TL Pfeffer, schwarz, gemahlen</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="150" data-unit="g">150 g</span> Blattspinat, frisch</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Olivenöl (für den Spinat)</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>👨‍🍳 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Zander vorbereiten</div></div><div class="step-body">Zanderfilet gründlich trocken tupfen (wichtig für knusprige Haut!), mit Salz und Pfeffer würzen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Haut knusprig braten</div></div><div class="step-body">Butter in einer Pfanne bei mittlerer bis hoher Hitze erhitzen. Zander mit der Hautseite zuerst einlegen, kurz andrücken. Nicht bewegen, bis die Haut goldbraun und knusprig ist.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Wenden &amp; fertig braten</div></div><div class="step-body">Zander wenden und nur noch kurz fertig braten – er ist sehr mager und wird schnell trocken.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Sauce ablöschen</div></div><div class="step-body">Fisch aus der Pfanne nehmen. Sahne, Zitronensaft und Kapern in die Pfanne geben, kurz aufkochen lassen, bis die Sauce leicht cremig wird.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Spinat anschwitzen</div></div><div class="step-body">In einer zweiten Pfanne Olivenöl erhitzen, Blattspinat darin zusammenfallen lassen, mit etwas Salz und Pfeffer abschmecken.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">6</div><div class="step-title">Servieren</div></div><div class="step-body">Zander mit der Butter-Sahne-Sauce und dem Blattspinat anrichten.</div></div>
+    <h2>💡 Tipps &amp; Variationen</h2>
+    <div class="tip-box"><strong>Extra knusprige Haut:</strong> Zander vor dem Braten kurz ungedeckt im Kühlschrank liegen lassen, damit die Haut trockener wird. Beim Braten nicht bewegen, bis sich die Haut von selbst löst.</div>
+    <div class="tip-box"><strong>Nährwerte pro Portion (ca.):</strong> 590 kcal, 42 g Fett, 44 g Eiweiß, 4 g Netto-Kohlenhydrate.</div>
   </div>
 
   <!-- TIPPS -->
