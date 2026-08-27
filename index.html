@@ -167,6 +167,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
   <button onclick="showRecipe('keto','haehnchen-salat',this)">🥗 Hähnchen-Salat</button>
   <button onclick="showRecipe('keto','rucola-salat',this)">🥗 Rucola-Salat</button>
   <button onclick="showRecipe('keto','zander',this)">🐟 Zanderfilet</button>
+  <button onclick="showRecipe('keto','chili-limetten-haehnchen',this)">🌶️ Chili-Limetten-Hähnchen</button>
   <button onclick="showRecipe('keto','tipps',this)">💡 Tipps</button>
 </div>
 
@@ -784,6 +785,48 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <h2>💡 Tipps &amp; Variationen</h2>
     <div class="tip-box"><strong>Extra knusprige Haut:</strong> Zander vor dem Braten kurz ungedeckt im Kühlschrank liegen lassen, damit die Haut trockener wird. Beim Braten nicht bewegen, bis sich die Haut von selbst löst.</div>
     <div class="tip-box"><strong>Nährwerte pro Portion (ca.):</strong> 570 kcal, 43 g Fett, 43 g Eiweiß, 4–5 g Netto-Kohlenhydrate.</div>
+  </div>
+
+  <!-- MEXIKANISCHE CHILI-LIMETTEN-HÄHNCHENPFANNE -->
+  <div class="recipe" id="keto-chili-limetten-haehnchen">
+    <h1 class="recipe-title">🌶️ Mexikanische Chili-Limetten-Hähnchenpfanne mit Avocado</h1>
+    <div class="portion-stepper" data-base="1">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">1</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box">
+      <div class="info-meta"><span>👥 1 Portion</span><span>🔪 10 min Vorbereitung</span><span>🔥 15 min Zubereitung</span></div>
+      <p>Feurig-frisches Keto-Gericht mit Chili, Limette, Avocado und Käse.</p>
+    </div>
+    <h2>🛒 Zutaten</h2>
+    <ul class="ingredient-list">
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="200" data-unit="g">200 g</span> Hähnchenschenkelfilet</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="70" data-unit="g">70 g</span> Rote Paprika</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="20" data-unit="g">20 g</span> Zwiebel</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="2" data-unit="Stk">2</span> Knoblauchzehen</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 TL Chiliflocken</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 TL Kreuzkümmel, gemahlen</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 TL Paprikapulver, scharf</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1.5" data-unit="EL">1,5 EL</span> Olivenöl</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Limettensaft</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>0,5 Avocado</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="30" data-unit="g">30 g</span> Saure Sahne, 24% Fett</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="30" data-unit="g">30 g</span> Gouda oder Cheddar, gerieben</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Prise Salz</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Prise Pfeffer</label></li>
+      <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="5" data-unit="g">5 g</span> Frischer Koriander, gehackt (optional)</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>👨‍🍳 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Hähnchen vorbereiten</div></div><div class="step-body">Hähnchenschenkelfilet in mundgerechte Stücke schneiden und mit Kreuzkümmel, Paprikapulver, Salz und Pfeffer würzen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Hähnchen anbraten</div></div><div class="step-body">Olivenöl in einer Pfanne bei mittlerer bis hoher Hitze erhitzen und das Hähnchen darin goldbraun anbraten, dann herausnehmen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Gemüse anbraten</div></div><div class="step-body">Rote Paprika, Zwiebel und Knoblauch in derselben Pfanne anbraten, bis sie weich sind.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Würzen &amp; ablöschen</div></div><div class="step-body">Chiliflocken kurz mitrösten, Hähnchen zurück in die Pfanne geben, mit Limettensaft ablöschen und alles köcheln lassen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Servieren</div></div><div class="step-body">Auf einem Teller anrichten, mit Käse bestreuen und kurz schmelzen lassen. Mit Avocadoscheiben und einem Klecks saurer Sahne toppen, mit frischem Koriander garnieren.</div></div>
+    <h2>💡 Tipps &amp; Variationen</h2>
+    <div class="tip-box"><strong>Fisch-Variante:</strong> Zander funktioniert genauso gut statt Hähnchen: in Filets teilen, mit Limette beträufeln und ca. 4–5 Minuten pro Seite braten. Wer's schärfer mag: mehr Chiliflocken oder eine frische Chilischote dazugeben.</div>
   </div>
 
   <!-- TIPPS -->
