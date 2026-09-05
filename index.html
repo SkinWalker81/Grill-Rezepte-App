@@ -152,12 +152,14 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
 <div class="recipe-nav visible" id="subnav-gasgrill">
   <button onclick="showRecipe('gasgrill','nachos',this)" class="active">🌮 Nacho Platte</button>
   <button onclick="showRecipe('gasgrill','wings',this)">🔥 Buffalo Wings</button>
+  <button onclick="showRecipe('gasgrill','knoblauchbrot',this)">🧄 Knoblauchbrot</button>
 </div>
 <div class="recipe-nav" id="subnav-dutch">
   <button onclick="showRecipe('dutch','chili',this)" class="active">🌶️ Chili con Carne</button>
   <button onclick="showRecipe('dutch','schichtfleisch',this)">🥩 Schichtfleisch</button>
   <button onclick="showRecipe('dutch','haehnchen-schichtfleisch',this)">🍗 Hähnchen Schichtfleisch</button>
   <button onclick="showRecipe('dutch','schweinebraten',this)">🍖 Schweinebraten</button>
+  <button onclick="showRecipe('dutch','gulasch',this)">🥘 Gulasch</button>
 </div>
 <div class="recipe-nav" id="subnav-mama">
   <button onclick="showRecipe('mama','kasnocken',this)" class="active">🧀 Kasnocken</button>
@@ -339,6 +341,37 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
       <li><input type="checkbox" onchange="toggleCheck(this)"><label>Wings saucieren und servieren – 19:00 Uhr! 🏆</label></li>
     </ul>
     <p class="source-link">Quelle: <a href="https://bbqpit.de" target="_blank">bbqpit.de</a></p>
+  </div>
+
+  <!-- KNOBLAUCHBROT -->
+  <div class="recipe" id="gasgrill-knoblauchbrot">
+    <h1 class="recipe-title">🧄 Die Mutter aller Knoblauchbrote</h1>
+    <div class="portion-stepper" data-base="1">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">1</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box"><div class="info-meta"><span>🧄 1 Brot</span><span>⏱️ 30 Min</span><span>🔪 15 Min Vorbereitung</span></div><p>Kastenweißbrot gefüllt mit würziger Knoblauch-Kräuter-Butter, in Alufolie gepackt und indirekt auf dem Grill gebacken. Warnung: macht laut Original süchtig 😄</p></div>
+    <h2>🛒 Zutaten</h2>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="250" data-unit="g">250 g</span> Butter</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="8" data-unit="Zehen">ca. 8</span> Knoblauchzehen</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 gehäufter TL Paprika Edelsüß</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>ca. ½ TL Salz (bei ungesalzener Butter/Süßrahm etwas mehr)</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Handvoll Petersilie</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Kastenweißbrot</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>📋 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Knoblauch &amp; Petersilie vorbereiten</div></div><div class="step-body">Knoblauch pressen, Petersilie klein schneiden.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Kräuterbutter mischen</div></div><div class="step-body">Alle Zutaten zur Butter geben und gut verrühren.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Brot einschneiden</div></div><div class="step-body">Brot in 1 cm breite Scheiben einschneiden, dabei unten ca. 0,5 cm stehen lassen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Bestreichen &amp; packen</div></div><div class="step-body">Brot auf beiden Seiten mit der Knoblauchbutter bestreichen und in Alufolie packen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Grillen – 30–40 Min bei 180°C</div></div><div class="step-body">Für 30–40 Minuten bei 180 Grad indirekt auf den Grill.</div></div>
+    <h2>💡 Tipps</h2>
+    <div class="tip-box"><strong>Warnung vom Original:</strong> Vorsicht, der Verzehr führt laut Rezeptkarte zu massiver Abhängigkeit 😄</div>
+    <p class="source-link">Quelle: <a href="https://www.instagram.com/einfachgrillen" target="_blank">einfachgrillen</a></p>
   </div>
 
 
@@ -574,6 +607,63 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <div class="tip-box"><strong>Sauce:</strong> Niemals durch das Sieb drücken → sonst wird sie trüb.</div>
     <div class="tip-box"><strong>Garpunkt:</strong> Fleisch fällt von selbst auseinander? Perfekt.</div>
     <div class="tip-box"><strong>Beilagen:</strong> Passt hervorragend zu Semmelknödeln oder Kartoffelknödeln.</div>
+  </div>
+
+  <!-- GULASCH -->
+  <div class="recipe" id="dutch-gulasch">
+    <h1 class="recipe-title">🥘 Gulasch</h1>
+    <div class="portion-stepper" data-base="11">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">11</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box"><div class="info-meta"><span>🥘 10–12 Portionen</span><span>⏱️ 3–4 Std</span><span>🔪 ca. 25 Min Vorbereitung</span></div><p>Rinderbeinscheibe langsam geschmort mit reichlich Zwiebel, Paprikapulver und Rotwein im Dutch Oven – zum Schluss verfeinert mit Zitronen-Knoblauch-Butter und frischer Paprika.</p></div>
+    <h2>🛒 Zutaten</h2>
+    <h3>Fleisch</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="2000" data-unit="g">2 kg</span> Rinderbeinscheibe (mit Knochen)</label></li>
+    </ul>
+    <h3>Gemüse &amp; Aromaten</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="2000" data-unit="g">2 kg</span> Zwiebel</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="4" data-unit="Stk">4</span> Spitzpaprika (optional)</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="8" data-unit="Zehen">8</span> Knoblauchzehen</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Bund Petersilie</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Zitrone</label></li>
+    </ul>
+    <h3>Gewürze</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="8" data-unit="EL">8 EL</span> Paprikapulver</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="8" data-unit="EL">8 EL</span> Kümmel</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="TL">1 TL</span> Majoran</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="3" data-unit="Stk">3</span> Lorbeerblätter</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Chili (optional)</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Salz, Pfeffer, Zucker</label></li>
+    </ul>
+    <h3>Flüssigkeit &amp; Sonstiges</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Flasche Rotwein</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="500" data-unit="ml">500 ml</span> Rinderbrühe</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>1 Tube Tomatenmark</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="125" data-unit="g">125 g</span> Butter</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Butterschmalz (zum Anbraten)</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>📋 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Fleisch &amp; Zwiebeln vorbereiten</div></div><div class="step-body">Fleisch in 5 cm große Stücke schneiden und mit Salz würzen. Zwiebeln grob würfeln.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Kümmel rösten</div></div><div class="step-body">Kümmel in einer Pfanne anrösten und im Mörser zerstoßen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Fleisch &amp; Knochen anbraten</div></div><div class="step-body">Fleisch und Knochen nacheinander in Butterschmalz kräftig anbraten und herausnehmen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Zwiebeln anrösten</div></div><div class="step-body">Zwiebeln im Bratfett anbraten und mit Salz und Zucker würzen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Tomatenmark &amp; Paprika</div></div><div class="step-body">Tomatenmark dazugeben und kurz anrösten lassen. Paprikapulver hinzugeben und mit Rotwein ablöschen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">6</div><div class="step-title">Aufgießen &amp; würzen</div></div><div class="step-body">Lorbeer, Kümmel, Chili und Rinderfond zugeben, mit Salz und Pfeffer würzen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">7</div><div class="step-title">Schmoren – 2 Std bei 150°C</div></div><div class="step-body">Fleisch hinzugeben und für 2 Stunden bei 150 Grad köcheln lassen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">8</div><div class="step-title">Zitronen-Knoblauch-Butter</div></div><div class="step-body">Schale einer Zitrone und den Knoblauch fein hacken und mit der Butter vermengen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">9</div><div class="step-title">Verfeinern – nochmal ca. 1 Std</div></div><div class="step-body">Nach den 2 Stunden die Zitronen-Knoblauch-Butter, die Paprikastücke und den Saft einer halben Zitrone hinzugeben und für ca. eine weitere Stunde köcheln lassen. Vor dem Servieren Lorbeer und Knochen entfernen.</div></div>
+    <h2>💡 Tipps</h2>
+    <div class="tip-box"><strong>Petersilie:</strong> Frisch gehackt vor dem Servieren drüberstreuen.</div>
+    <div class="tip-box"><strong>Beilagen:</strong> Passt super zu Knoblauchbrot oder Semmelknödeln.</div>
+    <p class="source-link">Quelle: <a href="https://www.instagram.com/einfachgrillen" target="_blank">einfachgrillen</a></p>
   </div>
 </div><!-- end cat-dutch -->
 
