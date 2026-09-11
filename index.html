@@ -153,6 +153,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
   <button onclick="showRecipe('gasgrill','nachos',this)" class="active">🌮 Nacho Platte</button>
   <button onclick="showRecipe('gasgrill','wings',this)">🔥 Buffalo Wings</button>
   <button onclick="showRecipe('gasgrill','knoblauchbrot',this)">🧄 Knoblauchbrot</button>
+  <button onclick="showRecipe('gasgrill','chicken-parmesan',this)">🍗 Chicken Parmesan</button>
 </div>
 <div class="recipe-nav" id="subnav-dutch">
   <button onclick="showRecipe('dutch','chili',this)" class="active">🌶️ Chili con Carne</button>
@@ -374,6 +375,55 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <p class="source-link">Quelle: <a href="https://www.instagram.com/einfachgrillen" target="_blank">einfachgrillen</a></p>
   </div>
 
+
+  <!-- CHICKEN PARMESAN -->
+  <div class="recipe" id="gasgrill-chicken-parmesan">
+    <h1 class="recipe-title">🍗 Chicken Parmesan</h1>
+    <div class="portion-stepper" data-base="4">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">4</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box"><div class="info-meta"><span>🍗 4 Portionen</span><span>⏱️ ca. 45 Min</span><span>🔪 25 Min Vorbereitung</span></div><p>Paniertes Hähnchenschnitzel mit würzigem Tomatensugo, Mozzarella und Parmesan überbacken – knusprig außen, saftig innen.</p></div>
+    <h2>🛒 Zutaten</h2>
+    <h3>Hähnchen &amp; Panade</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="4" data-unit="Stk">4</span> Hähnchenbrüste</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Mehl</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="3" data-unit="Stk">3</span> Eier</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="200" data-unit="g">200 g</span> Panko</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="100" data-unit="g">100 g</span> Parmesan, gerieben</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="8" data-unit="Scheiben">8</span> Scheiben Mozzarella</label></li>
+    </ul>
+    <h3>Tomatensugo</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="Stk">1</span> Zwiebel</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="3" data-unit="Zehen">3</span> Knoblauchzehen</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="250" data-unit="g">250 g</span> Bauchspeck</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="800" data-unit="g">800 g</span> Dosentomaten</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Tomatenmark</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Honig</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Chili-Flocken</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Basilikum</label></li>
+    </ul>
+    <h3>Sonstiges</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Olivenöl</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Salz &amp; Pfeffer</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>📋 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Hähnchen plattieren &amp; würzen</div></div><div class="step-body">Hähnchenbrüste längs halbieren und noch einmal teilen. Im Gefrierbeutel oder zwischen Folie mit einem Fleischplattierer vorsichtig plattieren, bis sie überall gleich dick sind. Von beiden Seiten großzügig salzen und 20–60 Minuten im Kühlschrank ruhen lassen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Tomatensugo kochen</div></div><div class="step-body">Bauchspeck und Zwiebel fein würfeln, Knoblauch fein hacken. Olivenöl in einer Pfanne erhitzen, Speck auslassen und herausnehmen. Zwiebel glasig braten, Knoblauch kurz mitbraten. Tomatenmark einrühren und kurz anrösten. Dosentomaten, Honig, Bauchspeck und Chili-Flocken zugeben und 10–15 Minuten köcheln lassen, bis die Sauce dick wird. Basilikum grob hacken und unterrühren, mit Salz und Pfeffer abschmecken.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Panieren</div></div><div class="step-body">Drei Stationen vorbereiten: Mehl, verquirlte Eier (gewürzt mit Salz und Pfeffer) und eine Mischung aus Panko, Pfeffer und 80 g fein geriebenem Parmesan. Schnitzel zuerst im Mehl wenden, dann durchs Ei ziehen und in der Panko-Parmesan-Mischung panieren. 20 Minuten liegen lassen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Ausbacken</div></div><div class="step-body">Reichlich Öl in einer Pfanne auf 170 Grad erhitzen und die Schnitzel 3–4 Minuten pro Seite goldbraun ausbacken – Kerntemperatur bei ca. 65 Grad (noch nicht durchgegart).</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Überbacken &amp; servieren</div></div><div class="step-body">Schnitzel in eine ofenfeste Form legen, mit etwas Tomatensugo und jeweils 2 Scheiben Mozzarella sowie geriebenem Parmesan bedecken. Im Grill oder Ofen (Oberhitze) 3–5 Minuten überbacken, bis der Käse geschmolzen und leicht gebräunt ist. Mit Basilikum, Chili-Flocken und Parmesan toppen. Heiß servieren.</div></div>
+    <h2>💡 Tipps</h2>
+    <div class="tip-box"><strong>Gleichmäßig plattieren:</strong> Wichtig für gleichmäßiges Garen – dünnere Stellen werden sonst trocken.</div>
+    <div class="tip-box"><strong>Sauce vorbereiten:</strong> Das Sugo kann gut vorgekocht werden, während die Schnitzel ruhen.</div>
+    <p class="source-link">Quelle: <a href="https://www.instagram.com/einfachgrillen" target="_blank">einfachgrillen</a></p>
+  </div>
 
 </div><!-- end cat-gasgrill -->
 
