@@ -161,6 +161,7 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
   <button onclick="showRecipe('dutch','haehnchen-schichtfleisch',this)">🍗 Hähnchen Schichtfleisch</button>
   <button onclick="showRecipe('dutch','schweinebraten',this)">🍖 Schweinebraten</button>
   <button onclick="showRecipe('dutch','gulasch',this)">🥘 Gulasch</button>
+  <button onclick="showRecipe('dutch','lasagne',this)">🍝 BBQ Lasagne</button>
 </div>
 <div class="recipe-nav" id="subnav-mama">
   <button onclick="showRecipe('mama','kasnocken',this)" class="active">🧀 Kasnocken</button>
@@ -715,6 +716,60 @@ h3 { font-size: 0.93rem; font-weight: 600; color: #666; margin: 1rem 0 0.4rem; }
     <div class="tip-box"><strong>Petersilie:</strong> Frisch gehackt vor dem Servieren drüberstreuen.</div>
     <div class="tip-box"><strong>Beilagen:</strong> Passt super zu Knoblauchbrot oder Semmelknödeln.</div>
     <p class="source-link">Quelle: <a href="https://www.instagram.com/einfachgrillen" target="_blank">einfachgrillen</a></p>
+  </div>
+
+  <!-- BBQ LASAGNE -->
+  <div class="recipe" id="dutch-lasagne">
+    <h1 class="recipe-title">🍝 BBQ Lasagne</h1>
+    <div class="portion-stepper" data-base="4">
+      <span>👥 Portionen:</span>
+      <button onclick="changePortions(this,-1)">−</button>
+      <span class="portion-count">4</span>
+      <button onclick="changePortions(this,1)">+</button>
+    </div>
+    <div class="info-box"><div class="info-meta"><span>🍖 4 Portionen</span><span>⏱️ ca. 1,5 Std</span><span>🔪 ca. 30 Min Vorbereitung</span></div><p>Diese einfache BBQ Lasagne hat es in sich. Cannelloni statt Lasagneplatten, würziges Hackfleisch, Béchamelsauce, BBQ-Sauce und eine knusprige Bacon-Käse-Kruste – aus dem Dutch Oven auf dem Gasgrill.</p></div>
+    <h2>🛒 Zutaten</h2>
+    <h3>Für die Cannelloni-Füllung</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="400" data-unit="g">400 g</span> Cannelloni</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="500" data-unit="g">500 g</span> Hackfleisch</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="400" data-unit="g">400 g</span> geriebener Käse nach Wahl</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> BBQ Rub (z.B. Happy Piggy) in Kombi mit einem Steakfinisher (z.B. Steak Perfection)</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Bacon</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>BBQ Sauce (z.B. MnG)</label></li>
+    </ul>
+    <h3>Für die Béchamelsauce</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="1" data-unit="EL">1 EL</span> Butter</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="2" data-unit="EL">2 EL</span> Mehl</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label><span class="ing-amount" data-base="300" data-unit="ml">300 ml</span> Milch</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Salz &amp; Pfeffer (oder Steakfinisher)</label></li>
+    </ul>
+    <h3>🧰 Zubehör</h3>
+    <ul class="ingredient-list">
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Dutch Oven</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Messer</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Schneidebrett</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Fetttrennspray</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>Marinadenhandschuhe</label></li>
+    <li><input type="checkbox" onchange="toggleCheck(this)"><label>GN Schale</label></li>
+    </ul>
+    <button class="reset-btn" onclick="resetChecklist(this)">🔄 Häkchen zurücksetzen</button>
+    <h2>📋 Zubereitung</h2>
+    <div class="step"><div class="step-header"><div class="step-num">1</div><div class="step-title">Füllung anrühren</div></div><div class="step-body">Das Hackfleisch, den Käse und den BBQ Rub in einer Schüssel ordentlich durchkneten.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">2</div><div class="step-title">Cannelloni befüllen</div></div><div class="step-body">Die Cannelloni vorsichtig mit der Hackfleischmasse befüllen, so dass sie nicht auseinanderbrechen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">3</div><div class="step-title">Bacon auslassen – ca. 20 Min vorheizen</div></div><div class="step-body">Den Dutch Oven ordentlich vorheizen (ca. 20 Min) und den Bacon darin scharf angrillen.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">4</div><div class="step-title">Bacon abkühlen lassen</div></div><div class="step-body">Den Bacon in einer Schüssel abkühlen lassen, danach die Béchamelsauce zubereiten.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">5</div><div class="step-title">Béchamelsauce zubereiten</div></div><div class="step-body">Butter in einem Topf schmelzen, das Mehl hinzugeben und mit einem Schneebesen ordentlich verrühren, bis das Ganze "klumpt". Nach und nach die Milch hinzugeben und stetig weiterrühren. Am Ende mit dem Steakfinisher würzen oder klassisch mit Salz &amp; Pfeffer.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">6</div><div class="step-title">Bacon zerbröseln</div></div><div class="step-body">Den Bacon zu kleinen Stückchen zerbröseln, da er als Crumble auf der Lasagne dient.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">7</div><div class="step-title">Schichten</div></div><div class="step-body">Die Cannelloni mit dem Bacon-Fett aus dem Dutch Oven einreiben, dann eine Schicht mit Cannelloni bedecken, etwas Béchamelsauce und BBQ Sauce darüber verteilen. Anschließend wieder eine Schicht Cannelloni usw., bis der Dutch Oven voll ist bzw. die Cannelloni leer sind.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">8</div><div class="step-title">Toppen</div></div><div class="step-body">Den geriebenen Käse darüber verteilen, genauso wie die Bacon-Crumble.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">9</div><div class="step-title">Indirekt grillen – ca. 180°C</div></div><div class="step-body">Den Dutch Oven in den indirekten Bereich stellen: z.B. auf dem Gasgrill die beiden äußeren Brenner auf niedrigster Stufe, die beiden mittleren Brenner aus, Dutch Oven genau in der Mitte platzieren. Deckeltemperatur ca. 180°C (+/- 20 Grad) – falls die Brenner das auf niedrigster Stufe nicht erreichen, die Regler etwas nach oben regulieren.</div></div>
+    <div class="step"><div class="step-header"><div class="step-num">10</div><div class="step-title">Servieren – nach 40–45 Min</div></div><div class="step-body">Nach ca. 40–45 Min ist die Lasagne fertig zum Servieren.</div></div>
+    <h2>💡 Tipps</h2>
+    <div class="tip-box"><strong>Bacon-Fett:</strong> Nicht wegschütten – damit werden die Cannelloni vor dem Schichten eingerieben, das bringt zusätzlichen Rauchgeschmack.</div>
+    <div class="tip-box"><strong>Käse:</strong> Mischung aus Mozzarella und Cheddar sorgt für eine gute Kruste.</div>
+    <p class="source-link">Quelle: Meat 'n' Great (via GrillGoods App)</p>
   </div>
 </div><!-- end cat-dutch -->
 
